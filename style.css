@@ -20,11 +20,49 @@ body {
 }
 
 .container {
-  height: 800px;
+  height: 70%;
   width: 1400px;
-  background-color: white;
+  background-color: #ecf0f1;
   position: absolute;
   bottom: 0px;
   border-radius: 100px;
   display: none;
+  text-align: center;
+}
+
+.question {
+  width: 800px;
+  margin: 0 auto;
+  font-size: 50px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnContainer {
+  display: flex;
+  height: 40%;
+  line-height: normal;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.buttonOne,
+.buttonTwo {
+  font-size: 30px;
+}
+
+.resultContainer {
+  height: 70%;
+  width: 1400px;
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 100px;
+  display: none;
+  text-align: center;
+}
+
+.question {
+  margin-top: 120px;
+  font-size: 110px;
 }
