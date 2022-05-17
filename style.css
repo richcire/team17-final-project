@@ -22,7 +22,7 @@ body {
 .container {
   height: 70%;
   width: 1400px;
-  background-color: white;
+  background-color: #ecf0f1;
   position: absolute;
   bottom: 0px;
   border-radius: 100px;
@@ -49,4 +49,15 @@ body {
 .buttonOne,
 .buttonTwo {
   font-size: 30px;
+}
+
+.resultContainer {
+  height: 70%;
+  width: 1400px;
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 100px;
+  display: none;
+  text-align: center;
 }

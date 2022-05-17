@@ -105,14 +105,18 @@ const container = document.querySelector(".container");
 const question = document.querySelector(".question");
 const buttonOne = document.querySelector(".buttonOne");
 const buttonTwo = document.querySelector(".buttonTwo");
+const resultContainer = document.querySelector(".resultContainer");
 
 let questionIdx = 1;
+let result = "";
 
 console.log(startBtn);
 startBtn.addEventListener("click", () => {
   startBtn.style.display = "none";
   container.style.display = "block";
 });
+
+// container.style.background = "";
 
 question.innerText = questions[questionIdx]["Q"];
 
@@ -129,6 +133,8 @@ buttonOne.addEventListener("click", () => {
     questionIdx = nextQuestionIdx;
   } else {
     console.log(nextQuestionIdx);
+    container.style.display = "none";
+    resultContainer.style.display = "block";
   }
 });
 
@@ -142,5 +148,20 @@ buttonTwo.addEventListener("click", () => {
     questionIdx = nextQuestionIdx;
   } else {
     console.log(nextQuestionIdx);
+    container.style.display = "none";
+    resultContainer.style.display = "block";
   }
 });
+
+function changeBackground(questionIdx) {
+  if (questionIdx == 3) {
+  } else if (questionIdx == 5) {
+  } else if (questionIdx == 6) {
+  } else if (questionIdx == 10) {
+  } else if (questionIdx == 11) {
+  } else if (questionIdx == 13) {
+  } else if (questionIdx == 14) {
+  } else {
+    container.style.background = "#ecf0f1";
+  }
+}
