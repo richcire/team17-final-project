@@ -44,9 +44,8 @@ const questions = {
   7: {
     Q: "눈썹의 진하기는 어떤가요?",
     A: {
-      a: ["연한 편이다", 8],
-      b: ["보통이다", 5],
-      c: ["진한 편이다", 10], ////////////////////////////////////////////////////////////????????
+      a: ["연한 편이다/보통이다", 8],
+      b: ["진한 편이다", 10], ////////////////////////////////////////////////////////////????????
     },
   },
   8: {
@@ -129,7 +128,7 @@ buttonOne.addEventListener("click", () => {
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
   } else {
-    console.log("end");
+    console.log(nextQuestionIdx);
   }
 });
 
@@ -142,6 +141,6 @@ buttonTwo.addEventListener("click", () => {
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
   } else {
-    console.log("end");
+    console.log(nextQuestionIdx);
   }
 });
