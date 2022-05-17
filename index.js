@@ -79,22 +79,22 @@ const questions = {
   12: {
     Q: "명도와 채도가 높은 옷이 잘 어울리나요?",
     A: {
-      a: ["그렇다", "봄 웜톤"],
-      b: ["그렇지 않다", "가을 웜톤"],
+      a: ["그렇다", "springWarm"],
+      b: ["그렇지 않다", "fallWarm"],
     },
   },
   13: {
     Q: "당신에게 잘 어울리는 스웨터 색은?",
     A: {
       a: ["노란 기가 있는 따뜻한 색", 12],
-      b: ["푸른 기가 있는 차가운 색", "여름 쿨톤"],
+      b: ["푸른 기가 있는 차가운 색", "summerCool"],
     },
   },
   14: {
     Q: "당신이 어두운 색 정장을 입는다면 어울리는 색은?",
     A: {
-      a: ["검정, 회색 계열", "겨울 쿨톤"],
-      b: ["다크브라운 계열", "가을 웜톤"],
+      a: ["검정, 회색 계열", "winterCool"],
+      b: ["다크브라운 계열", "fallWarm"],
     },
   },
 };
@@ -106,6 +106,7 @@ const question = document.querySelector(".question");
 const buttonOne = document.querySelector(".buttonOne");
 const buttonTwo = document.querySelector(".buttonTwo");
 const resultContainer = document.querySelector(".resultContainer");
+const resultButton = document.querySelector(".resultButton");
 
 let questionIdx = 1;
 let result = "";
@@ -133,6 +134,7 @@ buttonOne.addEventListener("click", () => {
     questionIdx = nextQuestionIdx;
   } else {
     console.log(nextQuestionIdx);
+    result = nextQuestionIdx;
     container.style.display = "none";
     resultContainer.style.display = "block";
   }
@@ -148,9 +150,15 @@ buttonTwo.addEventListener("click", () => {
     questionIdx = nextQuestionIdx;
   } else {
     console.log(nextQuestionIdx);
+    result = nextQuestionIdx;
     container.style.display = "none";
     resultContainer.style.display = "block";
   }
+});
+
+resultButton.addEventListener("click", () => {
+  console.log("result!");
+  location.replace(`show.html?result=${result}`);
 });
 
 function changeBackground(questionIdx) {
