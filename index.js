@@ -99,6 +99,7 @@ const questions = {
   },
 };
 
+const body = document.body
 const startBtn = document.querySelector(".startBtn");
 const title = document.querySelector(".title");
 const container = document.querySelector(".container");
@@ -131,6 +132,7 @@ buttonOne.addEventListener("click", () => {
     buttonOne.innerText = questions[nextQuestionIdx]["A"]["a"][0];
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
+    changeBackground(questionIdx);
   } else {
     console.log(nextQuestionIdx);
     container.style.display = "none";
@@ -146,6 +148,7 @@ buttonTwo.addEventListener("click", () => {
     buttonOne.innerText = questions[nextQuestionIdx]["A"]["a"][0];
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
+    changeBackground(questionIdx);
   } else {
     console.log(nextQuestionIdx);
     container.style.display = "none";
@@ -155,12 +158,19 @@ buttonTwo.addEventListener("click", () => {
 
 function changeBackground(questionIdx) {
   if (questionIdx == 3) {
+    container.style.background = "linear-gradient(90deg, #FAB1BE 50%, #EC685B 50%)";
   } else if (questionIdx == 5) {
+    container.style.background = "linear-gradient(90deg, #E7BA1F 50%, #C0C0C0 50%)";
   } else if (questionIdx == 6) {
+    container.style.background = "linear-gradient(90deg, #C68A12 25% , #999400 25% 50%, #98A16A 50% 75%, #8E0023 75% )";
   } else if (questionIdx == 10) {
+    container.style.background = "linear-gradient(90deg, #EC3829 10%, #D21C7D 10% 20%, #FEFB54 20% 30%, #71FA4C 30% 40%, #3E91F7 40% 50%, #EF404A 50% 60%, #F2728C 60% 70%, #FFD400 70% 80%, #80B463 80% 90%, #27AAE1 90%)";
   } else if (questionIdx == 11) {
+    container.style.background = "linear-gradient(90deg, #42271B 25%, #211919 25% 50%, #935939 50% 75%, #322B24 75%)";
   } else if (questionIdx == 13) {
+    container.style.background = "linear-gradient(90deg, #FBC837 50%, #007DB7 50%)";
   } else if (questionIdx == 14) {
+    container.style.background = "linear-gradient(90deg, #38342F 50%, #574539 50%)";
   } else {
     container.style.background = "#ecf0f1";
   }
