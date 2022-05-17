@@ -66,24 +66,3 @@ body {
   margin-top: 120px;
   font-size: 110px;
 }
-
-.btnContainer {
-  display: flex;
-}
-.buttonone {
-  margin-top: 300px;
-  height: 200px;
-  width: 600px;
-  border-radius: 12px;
-  font-size: 35px;
-  margin: right 300px;
-}
-
-.buttontwo {
-  margin-top: 300px;
-  height: 200px;
-  width: 600px;
-  border-radius: 12px;
-  font-size: 35px;
-  margin: right 300px;
-}
