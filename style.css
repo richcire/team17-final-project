@@ -66,3 +66,9 @@ body {
   margin-top: 120px;
   font-size: 110px;
 }
+
+.cardcontainer{
+  display:grid;
+  column-gap:30px;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+}
