@@ -16,6 +16,10 @@ Opensource Software Practice final project by team 17
 자신의 피부를 직접 화면에 대어 색상과 어울리는 지 비교하며 질문에 응답한다.
 결과창에서는 자신의 퍼스널 컬러에 대한 설명과 화장품, 옷, 헤어 등에 대한 추천을 받을 수 있다.
 
+이 프로그램은 검사비 부담과 매장 방문의 수고로움을 덜기 위해 제작되었다. 
+따라서 퍼스널 컬러를 알고 싶지만 매장 방문이 어려운 사람에게 이 페이지를 통해 진단할 것을 추천한다.
+간편하게 퍼스널 컬러를 검사할 수 있기 때문에 퍼스널 컬러에 관심이 있는 누구라도 사용할 수 있다.
+
 
 ### Files
 * README.md: this text.
@@ -25,7 +29,13 @@ Opensource Software Practice final project by team 17
 * show.html: html code for display result page.
 * style.css: css code for web page style.
 
+### Install & Usage
+포함된 파일을 모두 설치하여 index.html을 실행한다. 이후 화면에 표시되는 검사를 진행한다.
 
 ### Note
 보다 정확한 검사 결과를 위해 화면 밝기를 올려 검사하는 것을 권장한다.  
 자연광이나 백색광 아래에서 검사하는 것을 권장한다.  
+
+
+### Copyright
+상업적 용도로의 사용을 금한다.
