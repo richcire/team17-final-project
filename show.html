@@ -170,6 +170,7 @@
       
       if(result == "springWarm") {
         resultText.innerText = "봄웜";
+        resultText.style.color = "#FBD0D6";
         explanation.innerText = springWarmData.explanation;
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
@@ -178,6 +179,7 @@
         });
       }else if(result == "fallWarm") {
         resultText.innerText = "가을 웜";
+        resultText.style.color = "#BA393D";
         explanation.innerText = fallWarmData.explanation;
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
@@ -186,6 +188,7 @@
         });
       }else if(result == "summerCool") {
         resultText.innerText = "여름 쿨";
+        resultText.style.color = "#F08DC4"
         explanation.innerText = summerCoolData.explanation;
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
@@ -194,6 +197,7 @@
         });
       }else {
         resultText.innerText = "겨울 쿨";
+        resultText.style.color = "#5D324D"
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
           explanation.innerText = winterCoolData.explanation;
