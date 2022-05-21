@@ -112,13 +112,10 @@ const resultButton = document.querySelector(".resultButton");
 let questionIdx = 1;
 let result = "";
 
-console.log(startBtn);
 startBtn.addEventListener("click", () => {
   startBtn.style.display = "none";
   container.style.display = "block";
 });
-
-// container.style.background = "";
 
 question.innerText = questions[questionIdx]["Q"];
 
@@ -128,14 +125,12 @@ buttonTwo.innerText = questions[questionIdx]["A"]["b"][0];
 buttonOne.addEventListener("click", () => {
   const nextQuestionIdx = questions[questionIdx]["A"]["a"][1];
   if (Number.isInteger(nextQuestionIdx)) {
-    console.log(nextQuestionIdx);
     question.innerText = questions[nextQuestionIdx]["Q"];
     buttonOne.innerText = questions[nextQuestionIdx]["A"]["a"][0];
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
     changeBackground(questionIdx);
   } else {
-    console.log(nextQuestionIdx);
     result = nextQuestionIdx;
     container.style.display = "none";
     resultContainer.style.display = "block";
@@ -145,14 +140,12 @@ buttonOne.addEventListener("click", () => {
 buttonTwo.addEventListener("click", () => {
   const nextQuestionIdx = questions[questionIdx]["A"]["b"][1];
   if (Number.isInteger(nextQuestionIdx)) {
-    console.log(nextQuestionIdx);
     question.innerText = questions[nextQuestionIdx]["Q"];
     buttonOne.innerText = questions[nextQuestionIdx]["A"]["a"][0];
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
     changeBackground(questionIdx);
   } else {
-    console.log(nextQuestionIdx);
     result = nextQuestionIdx;
     container.style.display = "none";
     resultContainer.style.display = "block";
@@ -160,7 +153,6 @@ buttonTwo.addEventListener("click", () => {
 });
 
 resultButton.addEventListener("click", () => {
-  console.log("result!");
   location.replace(`show.html?result=${result}`);
 });
 
