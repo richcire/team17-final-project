@@ -166,10 +166,11 @@
       console.log(result);
       const resultText = document.querySelector(".resultText");
       const explanation = document.querySelector(".explanation");
-      explanation.innerText = springWarmData.explanation;
+      
       
       if(result == "springWarm") {
         resultText.innerText = "봄웜";
+        explanation.innerText = springWarmData.explanation;
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
           card.firstElementChild.src = springWarmData[cardNum].cardImg;
@@ -177,6 +178,7 @@
         });
       }else if(result == "fallWarm") {
         resultText.innerText = "가을 웜";
+        explanation.innerText = fallWarmData.explanation;
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
           card.firstElementChild.src = fallWarmData[cardNum].cardImg;
@@ -184,6 +186,7 @@
         });
       }else if(result == "summerCool") {
         resultText.innerText = "여름 쿨";
+        explanation.innerText = summerCoolData.explanation;
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
           card.firstElementChild.src = sumemrCoolData[cardNum].cardImg;
@@ -193,6 +196,7 @@
         resultText.innerText = "겨울 쿨";
         document.querySelectorAll(".card").forEach(card => {
           const cardNum = card.classList.item(1);
+          explanation.innerText = winterCoolData.explanation;
           card.firstElementChild.src = winterCoolData[cardNum].cardImg;
           card.lastElementChild.firstElementChild.innerText = winterCoolData[cardNum].cardContent;
         });
