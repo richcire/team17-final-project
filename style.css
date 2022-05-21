@@ -111,3 +111,9 @@ body {
   overflow: scroll;
   font-size: 1rem !important;
 }
+
+.btnInformation{
+  position : fixed;
+  top: 100px;
+  right: 50px;
+}
