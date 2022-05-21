@@ -69,7 +69,6 @@
 
     <script>
       
-      
       const springWarmData = {
         explanation : "'봄 웜톤'은 대체로 흰색빛이 많이 도는 순한 파스텔 계열이 잘 어울립니다.\n'봄 웜톤'의 장점은 맑고 생기있는 피부톤입니다.\n다만, 진한 색조나 짙은 음영 화장은 어울리지 않으니 주의해야 합니다.",
         cardOne : {
@@ -175,14 +174,31 @@
           const cardNum = card.classList.item(1);
           card.firstElementChild.src = springWarmData[cardNum].cardImg;
           card.lastElementChild.firstElementChild.innerText = springWarmData[cardNum].cardContent;
-        })
+        });
       }else if(result == "fallWarm") {
         resultText.innerText = "가을 웜";
+        document.querySelectorAll(".card").forEach(card => {
+          const cardNum = card.classList.item(1);
+          card.firstElementChild.src = fallWarmData[cardNum].cardImg;
+          card.lastElementChild.firstElementChild.innerText = fallWarmData[cardNum].cardContent;
+        });
       }else if(result == "summerCool") {
         resultText.innerText = "여름 쿨";
+        document.querySelectorAll(".card").forEach(card => {
+          const cardNum = card.classList.item(1);
+          card.firstElementChild.src = sumemrCoolData[cardNum].cardImg;
+          card.lastElementChild.firstElementChild.innerText = summerCoolData[cardNum].cardContent;
+        });
       }else {
         resultText.innerText = "겨울 쿨";
+        document.querySelectorAll(".card").forEach(card => {
+          const cardNum = card.classList.item(1);
+          card.firstElementChild.src = winterCoolData[cardNum].cardImg;
+          card.lastElementChild.firstElementChild.innerText = winterCoolData[cardNum].cardContent;
+        });
       }
+
+      
 
     </script>
   </body>
