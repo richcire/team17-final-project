@@ -55,7 +55,7 @@ body {
 .resultContainer {
   height: 70%;
   width: 1400px;
-  background-color: red;
+  background-color: #ecf0f1;
   position: absolute;
   bottom: 0px;
   border-radius: 100px;
