@@ -180,13 +180,16 @@ function changeBackground(questionIdx) {
   } else if (questionIdx == 11) {
     container.style.background =
       "linear-gradient(90deg, #42271B 25%, #211919 25% 50%, #935939 50% 75%, #322B24 75%)";
+    container.style.color = "#ecf0f1";
   } else if (questionIdx == 13) {
     container.style.background =
       "linear-gradient(90deg, #FBC837 50%, #007DB7 50%)";
   } else if (questionIdx == 14) {
     container.style.background =
       "linear-gradient(90deg, #38342F 50%, #574539 50%)";
+    container.style.color = "#ecf0f1";
   } else {
     container.style.background = "#ecf0f1";
+    container.style.color = "#212529";
   }
 }
