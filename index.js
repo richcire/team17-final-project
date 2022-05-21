@@ -79,26 +79,27 @@ const questions = {
   12: {
     Q: "명도와 채도가 높은 옷이 잘 어울리나요?",
     A: {
-      a: ["그렇다", "봄 웜톤"],
-      b: ["그렇지 않다", "가을 웜톤"],
+      a: ["그렇다", "springWarm"],
+      b: ["그렇지 않다", "fallWarm"],
     },
   },
   13: {
     Q: "당신에게 잘 어울리는 스웨터 색은?",
     A: {
       a: ["노란 기가 있는 따뜻한 색", 12],
-      b: ["푸른 기가 있는 차가운 색", "여름 쿨톤"],
+      b: ["푸른 기가 있는 차가운 색", "summerCool"],
     },
   },
   14: {
     Q: "당신이 어두운 색 정장을 입는다면 어울리는 색은?",
     A: {
-      a: ["검정, 회색 계열", "겨울 쿨톤"],
-      b: ["다크브라운 계열", "가을 웜톤"],
+      a: ["검정, 회색 계열", "winterCool"],
+      b: ["다크브라운 계열", "fallWarm"],
     },
   },
 };
 
+const body = document.body
 const startBtn = document.querySelector(".startBtn");
 const title = document.querySelector(".title");
 const container = document.querySelector(".container");
@@ -106,6 +107,7 @@ const question = document.querySelector(".question");
 const buttonOne = document.querySelector(".buttonOne");
 const buttonTwo = document.querySelector(".buttonTwo");
 const resultContainer = document.querySelector(".resultContainer");
+const resultButton = document.querySelector(".resultButton");
 
 let questionIdx = 1;
 let result = "";
@@ -131,8 +133,10 @@ buttonOne.addEventListener("click", () => {
     buttonOne.innerText = questions[nextQuestionIdx]["A"]["a"][0];
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
+    changeBackground(questionIdx);
   } else {
     console.log(nextQuestionIdx);
+    result = nextQuestionIdx;
     container.style.display = "none";
     resultContainer.style.display = "block";
   }
@@ -146,21 +150,35 @@ buttonTwo.addEventListener("click", () => {
     buttonOne.innerText = questions[nextQuestionIdx]["A"]["a"][0];
     buttonTwo.innerText = questions[nextQuestionIdx]["A"]["b"][0];
     questionIdx = nextQuestionIdx;
+    changeBackground(questionIdx);
   } else {
     console.log(nextQuestionIdx);
+    result = nextQuestionIdx;
     container.style.display = "none";
     resultContainer.style.display = "block";
   }
 });
 
+resultButton.addEventListener("click", () => {
+  console.log("result!");
+  location.replace(`show.html?result=${result}`);
+});
+
 function changeBackground(questionIdx) {
   if (questionIdx == 3) {
+    container.style.background = "linear-gradient(90deg, #FAB1BE 50%, #EC685B 50%)";
   } else if (questionIdx == 5) {
+    container.style.background = "linear-gradient(90deg, #E7BA1F 50%, #C0C0C0 50%)";
   } else if (questionIdx == 6) {
+    container.style.background = "linear-gradient(90deg, #C68A12 25% , #999400 25% 50%, #98A16A 50% 75%, #8E0023 75% )";
   } else if (questionIdx == 10) {
+    container.style.background = "linear-gradient(90deg, #EC3829 10%, #D21C7D 10% 20%, #FEFB54 20% 30%, #71FA4C 30% 40%, #3E91F7 40% 50%, #EF404A 50% 60%, #F2728C 60% 70%, #FFD400 70% 80%, #80B463 80% 90%, #27AAE1 90%)";
   } else if (questionIdx == 11) {
+    container.style.background = "linear-gradient(90deg, #42271B 25%, #211919 25% 50%, #935939 50% 75%, #322B24 75%)";
   } else if (questionIdx == 13) {
+    container.style.background = "linear-gradient(90deg, #FBC837 50%, #007DB7 50%)";
   } else if (questionIdx == 14) {
+    container.style.background = "linear-gradient(90deg, #38342F 50%, #574539 50%)";
   } else {
     container.style.background = "#ecf0f1";
   }

@@ -74,6 +74,13 @@
 
     </div>
 
-    <script src="./index.js"></script>
+    <script>
+      
+      const params = new URLSearchParams(location.search);
+      const result = params.get("result");
+      console.log(result);
+
+
+    </script>
   </body>
 </html>
