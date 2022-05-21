@@ -68,13 +68,13 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
-  font-size: 40px;
+  font-size: 2rem;
   height: 8%;
 }
 
 .resultText {
-  font-size: 90px;
-  /* margin-bottom: 40px; */
+  font-size: 5rem;
+
   height: 12%;
 }
 
@@ -111,4 +111,10 @@ body {
 .card-body {
   overflow: scroll;
   font-size: 1rem !important;
+}
+
+.btnInformation {
+  position: fixed;
+  top: 5%;
+  right: 5%;
 }
