@@ -23,45 +23,40 @@
 
   <body>
       
-    <div class="title">퍼스널 컬러 결과</div>
-    <h2>당신의 퍼스널 컬러 결과는</h2>
-    <h3><div class="text-success">봄 웜</div>입니다</h3>
+    <h2 class="resultTitle">당신의 퍼스널 컬러 결과는</h2>
+    <div class="resultText">봄 웜</div>
+    <div class="explanation"></div>
 
-    <!--
-    <table>
-        <tr>
-            <td><img src="https://www.ifamily.co.kr/image/arda/result/graph_spring_wl.jpg" style="width:400px; height: 300px;"/></td><td><img src="https://www.ifamily.co.kr/image/arda/result/palette_spring_wl.jpg" style="width:400px; height: 300px;"></td>
-        </tr>
-        <tr>
-            <td> <img src="https://www.ifamily.co.kr/image/icolor/cometic_swl.png" style="width:400px; height: 300px;"></td><td><img src="https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_01.jpg" style="width:400px; height: 300px;"></td>
-        </tr>
-            <td><img src="https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_02.jpg" style="width:400px; height: 300px;"></td><td><img src ="https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_03.jpg" style="width:400px; height: 300px;"></td>
-            <td></td>
-    </table>
-  -->
   <div class = "cardcontainer">
-    <div class="card" style="width: 18rem;">
+    <div class="card cardOne" style="width: 18rem;">
       <img src="https://www.ifamily.co.kr/image/arda/result/graph_spring_wl.jpg" class="card-img-top" >
       <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card cardTwo" style="width: 18rem;">
       <img src="https://www.ifamily.co.kr/image/arda/result/palette_spring_wl.jpg" class="card-img-top" >
       <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card cardThree" style="width: 18rem;">
       <img src="https://www.ifamily.co.kr/image/icolor/cometic_swl.png" class="card-img-top" >
       <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card cardFour" style="width: 18rem;">
+      <img src="https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_01.jpg" class="card-img-top" >
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div class="card cardFive" style="width: 18rem;">
       <img src="https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_01.jpg" class="card-img-top" >
       <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -69,24 +64,76 @@
     </div>
 
   </div>
-    
-
 
     </div>
 
     <script>
       
+      
+      const springWarmData = {
+        explanation : "'봄 웜톤'은 대체로 흰색빛이 많이 도는 순한 파스텔 계열이 잘 어울립니다.\n'봄 웜톤'의 장점은 맑고 생기있는 피부톤입니다.\n다만, 진한 색조나 짙은 음영 화장은 어울리지 않으니 주의해야 합니다.",
+        cardOne : {
+          cardImg : "https://www.ifamily.co.kr/image/arda/result/graph_spring_wl.jpg",
+          cardContent : "당신과 조화를 이루는 색은 흰 기가 많이 도는 순한 파스텔 톤입니다. 이는 회색빛이 섞인 탁한 파스텔과는 거리가 멉니다.'봄 웜 라이트 톤'의 컬러는 페일톤과 라이트 톤으로가볍고 순한 느낌을 줍니다.",
+        },
+        cardTwo : {
+          cardImg : "https://www.ifamily.co.kr/image/icolor/cometic_swl.png",
+          cardContent : "베스트 스타일링① 메이크업\n아이 : 살구나 피치 컬러 섀도우를 연하게 발라주세요. 갈색 아이라이너를 이용하되, 라인보다는 잘 컬링된 속눈썹을 강조하는 것이 좋습니다.\n치크 : 형광빛의 코랄 또는 흰빛이 도는 핑크컬러를 선택하세요.\n립 : 매트보다는 글로시한 제형의 코랄 컬러, 또는 옐로 베이스의 연한 핑크 컬러가 잘 어울립니다. ",
+        },
+        cardThree : {
+          cardImg : "https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_01.jpg",
+          cardContent : "옐로베이스의 부드럽고 맑은 색감이 잘 어울립니다. 라이트한 컬러를 입었을 때 생기있는 특유의 느낌이 살아납니다.가을스러운 텁텁한 컬러나 인위적인 색감은 건조하고 경직되어 편안해보이지 않으므로 주의해주세요.",
+        },
+        cardFour : {
+          cardImg : "https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_03.jpg",
+          cardContent : "봄 라이트 타입의 생기있고 투명한 느낌은 정말 독보적이에요! 그래서 깔끔한 색상과 잔무늬 옷 잘 어울립니다. 그러나 힙, 펑키, 스트릿, 써지컬 같은 스타일은 소화하기 어려운 경우가 많답니다. 기하학적 무늬가 많은 옷이나 유광이 많은 옷은 주의해야 해요.",
+        },
+        cardFive : {
+          cardImg : "https://www.icolor.io/icolor/image/icolor/color_view/fashion_swl_04.jpg",
+          cardContent : "이렇게 곡선 무드의 사랑스럽고 청순한 분위기가 본연의 여리여리한 생기를 확 살려줄 수 있습니다. 명도와 채도가 낮은 탁한 색은 봄 웜의 밝고 맑은 에너지를 죽일 수 있으니 밝고 맑은 색을 사용하는 것이 좋습니다. ",
+        },
+      }
+      const summerCoolData = {
+        explanation : "",
+        cardOne : {
+          cardImg : "",
+          cardContent : "",
+        },
+      }
+      const fallWarmData = {
+        explanation : "",
+        cardOne : {
+          cardImg : "",
+          cardContent : "",
+        },
+      }
+      const winterCoolData = {
+        explanation : "",
+        cardOne : {
+          cardImg : "",
+          cardContent : "",
+        },
+      }
       const params = new URLSearchParams(location.search);
       const result = params.get("result");
       console.log(result);
+      const resultText = document.querySelector(".resultText");
+      const explanation = document.querySelector(".explanation");
+      explanation.innerText = springWarmData.explanation;
+      
       if(result == "springWarm") {
-        
+        resultText.innerText = "봄웜";
+        document.querySelectorAll(".card").forEach(card => {
+          const cardNum = card.classList.item(1);
+          card.firstElementChild.src = springWarmData[cardNum].cardImg;
+          card.lastElementChild.firstElementChild.innerText = springWarmData[cardNum].cardContent;
+        })
       }else if(result == "fallWarm") {
-
+        resultText.innerText = "가을 웜";
       }else if(result == "summerCool") {
-
+        resultText.innerText = "여름 쿨";
       }else {
-
+        resultText.innerText = "겨울 쿨";
       }
 
     </script>

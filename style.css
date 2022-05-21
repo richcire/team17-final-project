@@ -67,8 +67,39 @@ body {
   font-size: 110px;
 }
 
+.resultTitle {
+  margin-top: 60px;
+  margin-bottom: 0px;
+  font-size: 50px;
+}
+
+.resultText {
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+
+.explanation {
+  background-color: whitesmoke;
+  margin-bottom: 100px;
+  width: 50%;
+  font-size: 23px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+}
+
 .cardcontainer {
-  display: grid;
+  display: flex;
   column-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 60%;
+}
+
+.card {
+  height: 80%;
+  border-radius: 20px;
+}
+
+.card-img-top {
+  border-radius: 20px;
+  max-height: 40%;
 }
