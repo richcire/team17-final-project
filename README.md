@@ -31,7 +31,8 @@ Opensource Software Practice final project by team 17
 
 
 ### Usage
-Published URL: #### ???
+Published URL: https://richcire.github.io/team17-final-project/
+Chrome 환경에서 개발되었으므로 chrome 에서 실행하시길 권장합니다.
 
 
 ### Note
