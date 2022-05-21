@@ -47,8 +47,7 @@ body {
   justify-content: space-evenly;
 }
 .buttonOne,
-.buttonTwo,
-.resultButton {
+.buttonTwo {
   font-size: 30px;
 }
 
@@ -61,4 +60,15 @@ body {
   border-radius: 100px;
   display: none;
   text-align: center;
+}
+
+.question {
+  margin-top: 120px;
+  font-size: 110px;
+}
+
+.cardcontainer {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
