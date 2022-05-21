@@ -29,8 +29,10 @@ Opensource Software Practice final project by team 17
 * show.html: html code for display result page.
 * style.css: css code for web page style.
 
-### Install & Usage
-포함된 파일을 모두 설치하여 index.html을 실행한다. 이후 화면에 표시되는 검사를 진행한다.
+
+### Usage
+Published URL: #### ???
+
 
 ### Note
 보다 정확한 검사 결과를 위해 화면 밝기를 올려 검사하는 것을 권장한다.  
